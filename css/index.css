@@ -64,6 +64,7 @@ header .container .full-nav {
   padding: 0 10px;
   position: absolute;
   right: 0;
+  z-index: 1;
 }
 
 header .container .compact-nav-input:checked ~ .full-nav {
@@ -154,7 +155,7 @@ button.primary-cta:hover::after {
 }
 
 header {
-  position: sticky;
+  /* position: sticky; */
   z-index: 100;
   width: 100%;
 }
@@ -244,13 +245,17 @@ footer {
 }
 
 footer .container {
-  display: flex;
   align-items: center;
+}
+
+footer .social-links {
+  padding: 20px;
+  min-width: 250px;
 }
 
 footer .links {
   padding: 20px;
-  flex-grow: 1;
+  min-width: 200px;
 }
 
 footer .links .link {
@@ -260,10 +265,6 @@ footer .links .link {
 
 footer .links .link a {
   color: var(--footer-text-color);
-}
-
-footer .left {
-  flex-grow: 1;
 }
 
 footer .social-icons {
