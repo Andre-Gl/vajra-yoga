@@ -213,6 +213,8 @@ footer {
   margin: 20px 0 0 0;
   background-color: var(--footer-bg-color);
   color: var(--footer-text-color);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 footer .container {
