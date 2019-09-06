@@ -52,9 +52,34 @@ p {
   margin-bottom: 5px;
 }
 
+header .container .compact-nav-input {
+  display: none;
+}
 
-@media screen and (max-width: 734px) {
-  header  .container nav {
+header .container .full-nav {
+  display: none;
+  background-color: var(--brand-white-color);
+  padding: 0 10px;
+  position: absolute;
+  right: 0;
+}
+
+header .container .compact-nav-input:checked ~ .full-nav {
+  display: block;
+}
+
+header .container .compact-nav-input:checked ~ .compact-nav-label {
+  color: var(--brand-color);
+}
+
+@media screen and (min-width: 734px) {
+  header .container .full-nav {
+    display: block;
+    position: static;
+    padding: 0;
+  }
+
+  header .container .compact-nav {
     display: none;
   }
 }
@@ -141,10 +166,6 @@ header .container {
   border-bottom: 1px solid var(--brand-color);
 }
 
-header .container nav {
-  text-align: right;
-}
-
 header .container .logo {
   position: absolute;
   left: 0;
@@ -153,7 +174,6 @@ header .container .logo {
 }
 
 section {
-
   border-bottom: 1px solid var(--section-delimeter-bg-color);
 }
 
