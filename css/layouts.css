@@ -1,0 +1,46 @@
+
+.display-inline-block {
+  display: inline-block;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-1 {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.flex-2 {
+  flex-basis: 0;
+  flex-grow: 2;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.space-1 {
+  padding: 8px;
+}
+
+.space-2 {
+  padding: 16px;
+}
+
+.space-3 {
+  padding: 24px;
+}
+
+.space-4 {
+  padding: 36px;
+}

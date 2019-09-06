@@ -1,0 +1,330 @@
+html {
+  --brand-color: #0f965b;
+  --brand-white-color: #FFFFFF;
+  --brand-dark-gray-color: #3D4C53;
+  --text-color: #222222;
+  --button-bg-color: #3D4C53;
+  --button-text-color: #FFFFFF;
+  --section-delimeter-bg-color: #CCCCCC;
+  --footer-bg-color: #3D4C53;
+  --footer-text-color: #FFFFFF;
+
+
+}
+
+body {
+  color: var(--text-color);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 56px;
+  line-height: 80px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 100px;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+
+@media screen and (max-width: 734px) {
+  header  .container nav {
+    display: none;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+nav a {
+  position: relative;
+  padding: 5px 10px;
+  color: var(--brand-color);
+  font-weight: 700;
+}
+
+nav a::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(0,0,0,0.1);
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  transform: translateY(10px);
+}
+
+nav a:focus::after,
+nav a:hover::after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+button.primary-cta {
+  position: relative;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--button-bg-color);
+  box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+  color: var(--button-text-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+button.primary-cta::after {
+  content: '\2709';
+  position : absolute;
+  width : 40px;
+  height : 100%;
+  left: -40px;
+  top: 0;
+  transition: .3s;
+  color: var(--button-text-color);
+  background: var(--brand-color);
+  font-size: 38px;
+}
+
+button.primary-cta:focus::after,
+button.primary-cta:hover::after {
+  left: 0;
+}
+
+header {
+  position: sticky;
+  z-index: 100;
+  width: 100%;
+}
+
+header .container {
+  position: relative;
+  line-height: 64px;
+  height: 64px;
+  padding: 0 20px 0 140px;
+  margin: 0 20px;
+  border-bottom: 1px solid var(--brand-color);
+}
+
+header .container nav {
+  text-align: right;
+}
+
+header .container .logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 64px;
+}
+
+section {
+
+  border-bottom: 1px solid var(--section-delimeter-bg-color);
+}
+
+section.splash {
+  position: relative;
+  background-image: url('../img/main-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+}
+
+section .overlay {
+  position: relative;
+  padding-top: 140px;
+  padding-bottom: 200px;
+  /* height: 100%;
+  width: 100%; */
+  /* background-color: rgba(255, 255, 255, .7); */
+  background: linear-gradient(
+    to bottom,
+    white,
+    rgba(255, 255, 255, 0.1)
+  );
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+section .overlay h1,
+section .overlay h2,
+section .overlay p {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+section .overlay .primary-cta {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+section .overlay .by-line {
+  font-size: 30px;
+  line-height: 40px;
+
+  letter-spacing: 1px;
+}
+
+section .section-list li {
+  min-width: 150px;
+}
+
+section .section-img-photo {
+  min-width: 300px;
+  width: 100%;
+}
+
+footer {
+  margin: 20px 0 0 0;
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
+}
+
+footer .container {
+  display: flex;
+  align-items: center;
+}
+
+footer .links {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+footer .links .link {
+  padding: 5px;
+  display: block;
+}
+
+footer .links .link a {
+  color: var(--footer-text-color);
+}
+
+footer .left {
+  flex-grow: 1;
+}
+
+footer .social-icons {
+  padding: 20px 0;
+}
+
+footer .social-icons .social-icon {
+  padding: 5px;
+  display: inline-block;
+}
+
+footer .copy-right {
+  padding: 0 5px;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+
+
+/**********************************/
+/* TIME */
+time.icon {
+  font-size: 1em; /* change icon size */
+  display: block;
+  position: relative;
+  width: 7em;
+  height: 7em;
+  background-color: #fff;
+  border-radius: 0.6em;
+  box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff, 0 3px 0 #bdbdbd, 0 4px 0 #fff, 0 5px 0 #bdbdbd, 0 0 0 1px #bdbdbd;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: rotate(0deg) skewY(0deg);
+  -webkit-transform-origin: 50% 10%;
+  transform-origin: 50% 10%;
+}
+
+time.icon * {
+  display: block;
+  width: 100%;
+  font-size: 1em;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+}
+
+time.icon strong {
+  padding: 0.4em 0;
+  color: #fff;
+  background-color: #fd9f1b;
+  border-bottom: 1px dashed #f37302;
+  box-shadow: 0 2px 0 #fd9f1b;
+}
+
+time.icon em {
+  color: #fd9f1b;
+}
+
+time.icon span {
+  width: 100%;
+  font-size: 2.8em;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: #2f2f2f;
+}
+
+time.icon:hover, time.icon:focus {
+  -webkit-animation: swing 0.6s ease-out;
+  animation: swing 0.6s ease-out;
+}
+
+@-webkit-keyframes swing {
+  0%   { -webkit-transform: rotate(0deg)  skewY(0deg); }
+  20%  { -webkit-transform: rotate(12deg) skewY(4deg); }
+  60%  { -webkit-transform: rotate(-9deg) skewY(-3deg); }
+  80%  { -webkit-transform: rotate(6deg)  skewY(-2deg); }
+  100% { -webkit-transform: rotate(0deg)  skewY(0deg); }
+}
+
+@keyframes swing {
+  0%   { transform: rotate(0deg)  skewY(0deg); }
+  20%  { transform: rotate(12deg) skewY(4deg); }
+  60%  { transform: rotate(-9deg) skewY(-3deg); }
+  80%  { transform: rotate(6deg)  skewY(-2deg); }
+  100% { transform: rotate(0deg)  skewY(0deg); }
+}
