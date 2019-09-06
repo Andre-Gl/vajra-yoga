@@ -50,6 +50,8 @@ h3 {
 
 p {
   margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 header .container .compact-nav-input {
@@ -227,6 +229,10 @@ section .section-list li {
 section .section-img-photo {
   min-width: 300px;
   width: 100%;
+}
+
+section .location-link {
+  color: var(--brand-color);
 }
 
 footer {
