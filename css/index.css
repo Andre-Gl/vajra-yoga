@@ -237,6 +237,7 @@ section .location-link {
 }
 
 footer {
+  position: relative;
   margin: 20px 0 0 0;
   background-color: var(--footer-bg-color);
   color: var(--footer-text-color);
@@ -281,6 +282,12 @@ footer .copy-right {
   font-size: 12px;
   line-height: 15px;
   font-weight: 700;
+}
+
+footer .footer-logo {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
 }
 
 .icon {
