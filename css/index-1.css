@@ -170,7 +170,7 @@ header .content {
   position: relative;
   line-height: 64px;
   height: 64px;
-  padding: 0 20px 0 140px;
+  padding: 0 0 0 140px;
 }
 
 header .content .logo {
